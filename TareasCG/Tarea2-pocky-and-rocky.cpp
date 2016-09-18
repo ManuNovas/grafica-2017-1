@@ -1,27 +1,88 @@
 #include "Main.h"
-const int ALTO = 150;
-const int ANCHO = 258;
+const int ALTO = 106;
+const int ANCHO = 135;
 
 void InitGL(GLvoid) {
 	glClearColor(0.5294, 0.8078, 1, 0);
 }
 
 void arboles( ){
-	GLint tronco[10][2] = {
-		2, 35,
-		2, 82,
-		15, 82,
+	GLint hojas[62][2]{
+		1, 27,
+		1, 106,
+		19, 106,
+		18, 105,
+		24, 105,
+		28, 101,
+		31, 101,
+		33, 99,
+		34, 100,
+		34, 98,
+		35, 97,
+		35, 95,
+		36, 94,
+		37, 94,
+		38, 93,
+		39, 94,
+		40, 94,
+		41, 93,
+		42, 93,
+		42, 91,
+		43, 91,
+		44, 92,
+		45, 92,
+		45, 38,
+		26, 38,
+		25, 39,
+		25, 40,
+		23, 42,
+		22, 42,
+		22, 40,
+		23, 39,
+		23, 37,
+		20, 34,
+		20, 36,
+		18, 36,
+		16, 34,
+		16, 33,
+		18, 31,
+		18, 29,
+		17, 28,
+		17, 27,
+		14, 30,
+		14, 32,
+		15, 33,
 		15, 35,
-		34, 32,
-		34, 56,
-		47, 56,
-		47, 32
+		14, 35,
+		12, 33,
+		12, 32,
+		10, 30,
+		9, 29,
+		9, 28,
+		6, 31,
+		6, 33,
+		7, 34,
+		7, 36,
+		6, 36,
+		5, 34,
+		5, 33,
+		3, 31,
+		3, 30,
+		2, 29,
+		2, 27
 	};
-	glBegin(GL_QUADS);
-	glColor3f(0.5451, 0.2706, 0.0745);
-	for (int i = 0; i < 10; i++) {
-		glVertex2iv(tronco[i]);
-	}
+
+	glBegin(GL_LINE);
+		glColor3f(0.3804, 0.2745, 0.1922);
+		glVertex2i(1, 6);
+		glVertex2i(1, 18);
+	glEnd( );
+
+	glBegin(GL_POLYGON);
+		glColor3f(0.2, 0.3922, 0.2);
+		for (int i = 0; i < 62; i++) {
+			glVertex2iv(hojas[i]);
+		}
 	glEnd( );
 }
 
@@ -31,12 +92,6 @@ void display(void) {
 	glLoadIdentity( );
 
 	arboles( );
-
-	glPushMatrix( );
-		glTranslatef(165, 0, 0);
-		glRotatef(180, 0, 1, 0);
-		arboles( );
-	glPopMatrix( );
 
 	glFlush( );
 }
@@ -65,7 +120,7 @@ void keyboard(unsigned char key, int x, int y) {
 int main(int argc, char** argv) {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_RGBA | GLUT_SINGLE);
-	glutInitWindowSize(ANCHO*2, ALTO*2);
+	glutInitWindowSize(ANCHO*4, ALTO*4);
 	glutInitWindowPosition(0, 0);
 	glutCreateWindow("Tarea 2 - Pocky & Rocky");
 	InitGL( );
