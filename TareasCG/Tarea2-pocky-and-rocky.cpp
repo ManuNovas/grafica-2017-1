@@ -69,7 +69,7 @@ void arboles( ) {
 		4, 32,
 		2, 30,
 		2, 29,
-		1, 28
+		1, 27
 	};
 
 	GLint hojasd[17][2]{
@@ -100,7 +100,6 @@ void arboles( ) {
 
 	glBegin(GL_LINE_STRIP);
 		glColor3f(0.2, 0.3922, 0.2);
-		glClearColor(0.2, 0.3922, 0.2, 0);
 		for (int i = 0; i < 62; i++) {
 			glVertex2iv(hojasi[i]);
 		}
@@ -115,7 +114,7 @@ void arboles( ) {
 }
 
 void pocky_rocky( ) {
-	GLint cabello_pocky[63][2]{
+	GLint cabello_pocky[85][2]{
 		36, 59,
 		36, 60,
 		35, 61,
@@ -149,43 +148,105 @@ void pocky_rocky( ) {
 		78, 61,
 		78, 58,
 		76, 58,
-		76, 61,
-		77, 62,
-		77, 64,
-		74, 67,
-		74, 72,
-		73, 73,
-		73, 74,
-		72, 75,
-		72, 76,
-		66, 82,
-		65, 82,
-		64, 83,
-		62, 83,
-		61, 84,
-		53, 84,
-		52, 83,
-		50, 83,
-		49, 82,
-		48, 82,
-		42, 76,
-		42, 75,
-		41, 74,
-		41, 73,
-		40, 72,
-		40, 66,
-		38, 64,
-		38, 62,
-		39, 61,
+		75, 57,
+		75, 55,
+		71, 51,
+		71, 49,
+		70, 49,
+		69, 50,
+		69, 52,
+		70, 53,
+		70, 54,
+		71, 55,
+		71, 62,
+		72, 63,
+		72, 66,
+		71, 67,
+		70, 67,
+		69, 68,
+		66, 68,
+		66, 70,
+		64, 72,
+		64, 73,
+		63, 74,
+		63, 75,
+		62, 76,
+		61, 75,
+		61, 71,
+		60, 70,
+		53, 70,
+		52, 71,
+		52, 75,
+		51, 76,
+		50, 75,
+		50, 74,
+		49, 73,
+		49, 71,
+		46, 68,
+		45, 68,
+		44, 67,
+		43, 67,
+		42, 66,
+		42, 63,
+		43, 62,
+		43, 53,
+		42, 52,
+		38, 52,
+		37, 53,
+		36, 53,
+		35, 54,
+		38, 56,
+		38, 57,
+		39, 58,
 		39, 59,
 		36, 59
 	};
 
-	glBegin(GL_LINE_LOOP);
+	//glPolygonMode(GL_FRONT, GL_FILL);
+	glBegin(GL_LINE_STRIP);
 		glColor3f(0, 0, 0);
-		for (int i = 0; i < 62; i++) {
+		for (int i = 0; i < 85; i++) {
 			glVertex2iv(cabello_pocky[i]);
 		}
+	glEnd( );
+
+	//Diadema
+	//glPolygonMode(GL_FRONT, GL_LINE);
+	glBegin(GL_LINE_STRIP);
+		glColor3f(0.9725, 0.9725, 0.9725);
+		glVertex2i(40, 70);
+		glVertex2i(40, 72);
+		glVertex2i(41, 73);
+		glVertex2i(41, 74);
+		glVertex2i(42, 75);
+		glVertex2i(42, 76);
+		glVertex2i(47, 81);
+		glVertex2i(48, 81);
+		glVertex2i(49, 82);
+		glVertex2i(51, 82);
+		glVertex2i(52, 83);
+		glVertex2i(61, 83);
+		glVertex2i(62, 82);
+		glVertex2i(64, 82);
+		glVertex2i(65, 81);
+		glVertex2i(66, 81);
+		glVertex2i(71, 76);
+		glVertex2i(71, 75);
+		glVertex2i(72, 74);
+		glVertex2i(72, 73);
+		glVertex2i(73, 72);
+		glVertex2i(73, 71);
+		glVertex2i(67, 76);
+		glVertex2i(66, 76);
+		glVertex2i(65, 77);
+		glVertex2i(63, 77);
+		glVertex2i(62, 78);
+		glVertex2i(52, 78);
+		glVertex2i(51, 77);
+		glVertex2i(49, 77);
+		glVertex2i(48, 76);
+		glVertex2i(47, 76);
+		glVertex2i(40, 70);
 	glEnd( );
 }
 
