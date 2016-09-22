@@ -202,8 +202,8 @@ void pocky_rocky( ) {
 		36, 59
 	};
 
-	//glPolygonMode(GL_FRONT, GL_FILL);
-	glBegin(GL_LINE_STRIP);
+	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	glBegin(GL_POLYGON);
 		glColor3f(0, 0, 0);
 		for (int i = 0; i < 85; i++) {
 			glVertex2iv(cabello_pocky[i]);
@@ -211,8 +211,8 @@ void pocky_rocky( ) {
 	glEnd( );
 
 	//Diadema
-	//glPolygonMode(GL_FRONT, GL_LINE);
-	glBegin(GL_LINE_STRIP);
+	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	glBegin(GL_POLYGON);
 		glColor3f(0.9725, 0.9725, 0.9725);
 		glVertex2i(40, 70);
 		glVertex2i(40, 72);
@@ -248,6 +248,90 @@ void pocky_rocky( ) {
 		glVertex2i(47, 76);
 		glVertex2i(40, 70);
 	glEnd( );
+
+	//Oreja Izquierda
+	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+	glBegin(GL_POLYGON);
+		glColor3f(0.9725, 0.7529, 0.5961);
+		glVertex2i(40, 61);
+		glVertex2i(40, 63);
+		glVertex2i(41, 64);
+		glVertex2i(41, 60);
+	glEnd( );
+
+	//Oreja Derecha
+	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+	glBegin(GL_POLYGON);
+		glColor3f(0.9725, 0.7529, 0.5961);
+		glVertex2i(75, 63);
+		glVertex2i(74, 63);
+		glVertex2i(74, 64);
+		glVertex2i(75, 65);
+		glVertex2i(76, 64);
+		glVertex2i(76, 62);
+		glVertex2i(75, 61);
+	glEnd( );
+
+	//Rostro
+	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	glBegin(GL_POLYGON);
+		glColor3f(0.9725, 0.7529, 0.5961);
+		glVertex2i(56, 46);
+		glVertex2i(54, 46);
+		glVertex2i(53, 47);
+		glVertex2i(52, 47);
+		glVertex2i(51, 48);
+		glVertex2i(50, 48);
+		glVertex2i(49, 49);
+		glVertex2i(48, 49);
+		glVertex2i(47, 50);
+		glVertex2i(46, 51);
+		glVertex2i(44, 53);
+		glVertex2i(44, 54);
+		glVertex2i(43, 55);
+		glVertex2i(43, 62);
+		glVertex2i(42, 63);
+		glVertex2i(42, 66);
+		glVertex2i(43, 67);
+		glVertex2i(44, 67);
+		glVertex2i(45, 68);
+		glVertex2i(46, 68);
+		glVertex2i(49, 71);
+		glVertex2i(49, 73);
+		glVertex2i(50, 74);
+		glVertex2i(50, 75);
+		glVertex2i(51, 76);
+		glVertex2i(52, 75);
+		glVertex2i(52, 71);
+		glVertex2i(53, 70);
+		glVertex2i(60, 70);
+		glVertex2i(61, 71);
+		glVertex2i(61, 75);
+		glVertex2i(62, 76);
+		glVertex2i(63, 75);
+		glVertex2i(63, 74);
+		glVertex2i(64, 73);
+		glVertex2i(64, 72);
+		glVertex2i(66, 70);
+		glVertex2i(66, 68);
+		glVertex2i(69, 68);
+		glVertex2i(70, 67);
+		glVertex2i(71, 67);
+		glVertex2i(72, 66);
+		glVertex2i(72, 63);
+		glVertex2i(71, 62);
+		glVertex2i(71, 55);
+		glVertex2i(70, 54);
+		glVertex2i(70, 53);
+		glVertex2i(69, 52);
+		glVertex2i(69, 50);
+		glVertex2i(68, 50);
+		glVertex2i(67, 49);
+		glVertex2i(66, 49);
+		glVertex2i(65, 47);
+		glVertex2i(64, 47);
+		glVertex2i(63, 46);
+	glEnd();
 }
 
 void display(void) {
