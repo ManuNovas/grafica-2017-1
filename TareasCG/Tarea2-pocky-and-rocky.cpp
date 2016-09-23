@@ -202,16 +202,23 @@ void pocky_rocky( ) {
 		36, 59
 	};
 
-	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 	glBegin(GL_POLYGON);
 		glColor3f(0, 0, 0);
-		for (int i = 0; i < 85; i++) {
+		for (int i = 0; i < 42; i++) {
 			glVertex2iv(cabello_pocky[i]);
 		}
 	glEnd( );
+	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+	glBegin(GL_POLYGON);
+		glColor3f(0, 0, 0);
+		for (int i = 43; i < 85; i++) {
+			glVertex2iv(cabello_pocky[i]);
+		}
+	glEnd();
 
 	//Diadema
-	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 	glBegin(GL_POLYGON);
 		glColor3f(0.9725, 0.9725, 0.9725);
 		glVertex2i(40, 70);
@@ -221,10 +228,27 @@ void pocky_rocky( ) {
 		glVertex2i(42, 75);
 		glVertex2i(42, 76);
 		glVertex2i(47, 81);
+		glVertex2i(47, 76);
+	glEnd();
+	glBegin(GL_POLYGON);
+		glVertex2i(47, 81);
 		glVertex2i(48, 81);
 		glVertex2i(49, 82);
 		glVertex2i(51, 82);
+		glVertex2i(51, 77);
+		glVertex2i(49, 77);
+		glVertex2i(48, 76);
+		glVertex2i(47, 76);
+	glEnd();
+	glBegin(GL_POLYGON);
+		glVertex2i(51, 82);
 		glVertex2i(52, 83);
+		glVertex2i(61, 83);
+		glVertex2i(61, 78);
+		glVertex2i(52, 78);
+		glVertex2i(51, 77);
+	glEnd();
+	glBegin(GL_POLYGON);
 		glVertex2i(61, 83);
 		glVertex2i(62, 82);
 		glVertex2i(64, 82);
@@ -242,11 +266,6 @@ void pocky_rocky( ) {
 		glVertex2i(63, 77);
 		glVertex2i(62, 78);
 		glVertex2i(52, 78);
-		glVertex2i(51, 77);
-		glVertex2i(49, 77);
-		glVertex2i(48, 76);
-		glVertex2i(47, 76);
-		glVertex2i(40, 70);
 	glEnd( );
 
 	//Oreja Izquierda
@@ -273,7 +292,7 @@ void pocky_rocky( ) {
 	glEnd( );
 
 	//Rostro
-	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 	glBegin(GL_POLYGON);
 		glColor3f(0.9725, 0.7529, 0.5961);
 		glVertex2i(56, 46);
@@ -304,6 +323,13 @@ void pocky_rocky( ) {
 		glVertex2i(52, 75);
 		glVertex2i(52, 71);
 		glVertex2i(53, 70);
+	glEnd();
+	glBegin(GL_POLYGON);
+		glVertex2i(56, 46);
+		glVertex2i(53, 70);
+		glVertex2i(60, 70);
+	glEnd();
+	glBegin(GL_POLYGON);
 		glVertex2i(60, 70);
 		glVertex2i(61, 71);
 		glVertex2i(61, 75);
@@ -331,7 +357,49 @@ void pocky_rocky( ) {
 		glVertex2i(65, 47);
 		glVertex2i(64, 47);
 		glVertex2i(63, 46);
+		glVertex2i(56, 46);
 	glEnd();
+
+	//Ojo izquierdo
+	glBegin(GL_POLYGON);
+		glColor3f(0.9725, 0.9725, 0.9725);
+		glVertex2i(51, 56);
+		glVertex2i(50, 56);
+		glVertex2i(48, 58);
+		glVertex2i(48, 64);
+		glVertex2i(49, 65);
+		glVertex2i(49, 66);
+		glVertex2i(51, 68);
+	glEnd();
+	glBegin(GL_POLYGON);
+		glVertex2i(51, 56);
+		glVertex2i(53, 56);
+		glVertex2i(54, 57);
+		glVertex2i(54, 58);
+		glVertex2i(55, 59);
+		glVertex2i(55, 66);
+		glVertex2i(53, 68);
+		glVertex2i(51, 68);
+	glEnd();
+	glBegin(GL_POLYGON);
+		glColor3f(0.3451, 0.1255, 0.0314);
+		glVertex2i(53, 59);
+		glVertex2i(52, 59);
+		glVertex2i(51, 60);
+		glVertex2i(51, 65);
+		glVertex2i(52, 66);
+		glVertex2i(53, 66);
+	glEnd();
+	glBegin(GL_POLYGON);
+		glVertex2i(53, 59);
+		glVertex2i(54, 59);
+		glVertex2i(55, 60);
+		glVertex2i(55, 65);
+		glVertex2i(54, 66);
+		glVertex2i(53, 66);
+	glEnd();
+
+	//Ojo derecho
 }
 
 void display(void) {
